@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <script src="validation.js"></script>
+
+    <style>
+        .mod{
+            display: inline-block;
+            text-align: center;
+            margin-left: 35%;
+        }
+       
+        .container{
+            display: inline-block;
+            color: white;
+            background-color: black;
+            border: 3px solid balck;
+            border-radius: 25px;
+            padding: 15px 15px;
+            /*
+            position: absolute;
+            top: 5%;
+            left:38%;*/
+            
+         
+
+        }
+
+        
+        p{
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="mod">
+    <p><b>Form validation in JavaScript</b></p>
+    <div class="container">
+    <form>
+
+        <input type="text" id="uname" placeholder="Enter name" autofocus onkeyup="valname()">
+        <span id="errname"></span>
+        <br><br>
+
+        <input type="text" id='phno' placeholder="Enter Phone Number" autofocus onkeyup="validphone()">
+        <span id="errphone"></span>
+        <br><br>
+
+        <input type="email" id="email" placeholder="Enter your email" autofocus onkeyup="valemail()">
+        <span id="erremail"></span>
+        <br><br>
+
+        <input type="password" id="psw"  name="psw" placeholder="Enter Password" required onkeyup="valpsw()" pattern=" /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]){8,}*$/">
+        <span id="errpsw"></span>
+        <br><br>
+    </form>
+
+
+    <div id="message">
+
+    <h3>Password must contain the following:</h3>
+    <p id="letter" >A <b>lowercase</b> letter</p>
+    <p id="capital" >A <b>capital (uppercase)</b> letter</p>
+    <p id="number" >A <b>number</b></p>
+    <p id="length" >Minimum <b>8 characters</b></p>
+    <br>
+    </div>
+
+    <textarea id="comment" placeholder="Enter your comment here: " onkeyup="validcom()"></textarea>
+        <span id="errcomment">Minimun 40 character</span>
+        <br><br>
+
+    <input type="checkbox" name="one" id="checkbox" onchange="validcheckbox()">I agree with your Terms and Conditions.<br>
+    <span id="errcheckbox"></span>
+    <br><br>
+    <input type="submit">
+
+    </div>
+    </div>
+    
+
+</body>
+</html>

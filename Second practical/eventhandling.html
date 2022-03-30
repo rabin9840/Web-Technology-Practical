@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>JavaScript Event Handling</title>
+         
+        <style>
+            .container{
+                position: absolute;
+                top: 20%;
+                left: 15%;
+
+                padding: 50px;
+                border-radius: 25px;
+                border:10px solid white;
+            }
+            
+
+            *{
+                background-color: black;
+                color: white;
+                text-align: center;
+                text-indent: 8px;
+            
+            }    
+            
+            .txt{
+                font-size: 25px;
+            }
+
+        </style>
+
+
+        <script type="text/javascript">
+            function eventEnvoked(){
+                value_of_click=document.getElementById("btn").value;
+                alert(value_of_click)
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+        <p class="txt">
+            Click the below button to see the effect of onmouse click event handling operating
+        </p>
+        <input type="button" placeholder="button" id="btn" value="event invoked" onclick="eventEnvoked()" class="txt">
+        </div>
+    </body>
+</html>
